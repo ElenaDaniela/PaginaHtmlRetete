@@ -1,0 +1,249 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  color: White;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #642580;
+}
+
+.logo {
+    background-image: url("images/titlu.jpg");
+}
+.caption {
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  text-align: center;
+  animation: pulse 1s infinite;
+}
+
+.border {
+  background-color: #b531ae;
+  color: White;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 5px;
+}
+h3 {
+  text-transform: uppercase;
+  font: 20px, sans-serif;
+  color: white;
+  text-align:center
+}
+
+.textSection {
+  background-color:#642580;
+  padding:15px 50px;
+  font-family: inherit;
+  margin: 0;
+}
+
+
+.fortune-container {
+  position: relative;
+  width: 32px;
+}
+.fortune-container img {
+  width: 100%;
+  height: auto;
+  float:left;
+}
+#fortuneDisplay{
+	background-color: #642580;
+	font-family: Courier New;
+	position: relative;
+	overflow: hidden;
+}
+
+
+
+.ingredients{
+  background-image: url("images/ingredientes.jpg");
+}
+
+ol#instructiuni {
+  /*list-style-type:none;*/
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 33%;
+}
+
+td, th {
+  border: 1px solid white;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: pink;
+  color: black;
+}
+
+.ingredients, .logo {
+position: relative;
+background-position: center;
+background-repeat: no-repeat;
+background-color: #642580;
+background-size: cover;
+min-height: 60%;
+background-attachment: fixed;
+opacity: 0.7;
+}
+
+/*galerie*/
+.container {
+    display: flex;
+    flex-wrap: wrap;
+	padding: 5px;
+    justify-content: space-evenly;
+}
+.cont{
+	position: relative;
+	text-align: center;
+	color: white;
+}
+.textt {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+}
+
+.item {
+     margin: 5px;
+	 visibility: visible;
+}
+
+#visibility-button{
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+/*bara de nav*/
+.navbar {
+  overflow: hidden;
+  background-color: #331a00;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn:hover{
+  background-color: #d1b3ff;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar a.active {
+  background-color: purple;
+  color: white;
+}
+
+.navbar .icon {
+  display: none;
+}
+/*drop down*/
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown-content a:hover {
+  background-color: #41BAC1;
+  color: black;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media only screen and (maxwidth: 1024px) {
+    .logo, .kitchen-equipment, .ingredients {
+        background-attachment: scroll;
+		min-height: 40%;
+    }
+	
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+ 
+.navbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {position: relative;}
+  .navbar.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .navbar.responsive .dropdown {float: none;}
+  .navbar.responsive .dropdown-content {position: relative;}
+  .navbar.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+/*titlul*/
+@keyframes pulse {
+  0% {transform: scale(1);}
+  50% {transform: scale(0.9);}
+  100% {transform: scale(1);}
+}
